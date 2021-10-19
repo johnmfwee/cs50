@@ -14,33 +14,32 @@
         flex-direction: column;
         align-items: center;
       }
-
+      .luckyButton {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 1rem 1rem;
+      }
       #searchQueryInput {
         width: 600px;
         height: 2.8rem;
-        border-radius: 1.625rem;
-        padding: 0 3.5rem 0 1.5rem;
+        border-radius: 1.75rem;
+        padding: 0 3rem 0 1.5rem;
         font-size: 1rem;
         align-items: center;
         text-align: center;
       }
-
       #searchQuerySubmit {
-        width: 200px;
         align-items: center;
         text-align: center:
       }
-
       #searchQuerySubmit:hover {
         cursor: pointer;
       }
-
       #luckySearchQuerySubmit {
-      width: 200px;
       align-items: center;
       text-align: center;
       }
-
       .links {
         text-align: right;
 }
@@ -52,13 +51,15 @@
       <a href="advancedsearch.html">Google Advanced Search</a>
     </div>
     <form action="https://google.com/search">
-      <div class="searchBar">
+    <div class="searchBar">
       <input id="searchQueryInput" type="text" name="q" placeholder="Google Search">
-      </div>
+    </div>
       <br />
-      <div class = "searchButton"> 
+    <div class="searchButton"> 
       <input id="searchQuerySubmit" name="btnK" type="submit" value="Google Search">
-      <input id"luckySearchQuerySubmit" name="btnI" type="submit" value="I'm Feeling Lucky" jsaction="trigger.kW1xhc">
+    </div>
+    <div class="luckyButton">
+      <input id"luckySearchQuerySubmit" name="btnI" type="submit" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" data-ved="0ahUKEwiNm6S0jYLrAhXslnIEHYv2B30QnRsIDg"/>
     </div>
     </form>
   </body>
