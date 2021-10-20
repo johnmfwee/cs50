@@ -4,55 +4,20 @@
     <meta charset="utf-8"/>
     <title>Google Advanced Search</title>
     <style>
-      .searchBar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .searchButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #searchQueryInput {
-        width: 600px;
-        height: 2.8rem;
-        border-radius: 1.625rem;
-        padding: 0 3.5rem 0 1.5rem;
-        font-size: 1rem;
-        align-items: center;
-        text-align: center;
-      }
-
-      #searchQuerySubmit {
-        width: 200px;
-        align-items: center;
-        text-align: center:
-      }
-
-      #searchQuerySubmit:hover {
-        cursor: pointer;
-      }
-
       .links {
         text-align: right;
       }
-      .findPages {
-        width: 16%;
-        height: 30px;
-        display: table-cell;
-        vertical-align: middle;
+      #search { 
+        display: table;
       }
-      .findPagesWhitespace {
-        min-width: 167px;
-        min-height: 41px;
-      }
-      .tooltip {
-        height: 30px;
-        width: 33%;
+      .searchBox {
         display: table-cell;
-        vertical-align: middle;
+      }
+      p {
+        display: table-row;
+      }
+      label {
+        display: table-cell;
       }
     </style>
   </head>
@@ -61,18 +26,25 @@
     <div class="links">
       <a href="search.html">Google Search</a>
     </div>
-
-    <!-- 
-      find pages with "all of these words"
-      find pages with "this exact word or phrase"
-      find pages with "any of these words"
-      find pages with "none of these words"
-    -->
-    <form id="advancedSearch" action="https://google.com/search" method="GET" name="f">
-      <div class="findPages">Find pages with...</div>
-      <div class="findPagesWhitespace">&nbsp;</div>
-      <div class ="tooltip">To do this in the search box.</div>
-    </form>
+    <form action="https://google.com/search" id="search">
+      <p>
+        <label>All these words:</label>
+        <input class="searchBox" type="text" name="as_q" >
+      </p><br>
+      <p>
+        <label>Exact word/phrase:</label>
+        <input class="searchBox" type="text" name="as_epq" >
+      </p><br>
+      <p> 
+        <label>Any of these words:</label>
+        <input class="searchBox" type="text" name="as_oq" >
+      </p><br>
+      <p>
+        <label>None of these words:</label>
+        <input class="searchBox" type="text" name="as_eq" >
+      </p><br>
+      <br><input type="submit" value="Advanced Search">
+    </form>         
   </body>
 </html>
 
