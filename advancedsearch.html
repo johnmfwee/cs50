@@ -37,21 +37,41 @@
 
       .links {
         text-align: right;
-}
+      }
+      .findPages {
+        width: 16%;
+        height: 30px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .findPagesWhitespace {
+        min-width: 167px;
+        min-height: 41px;
+      }
+      .tooltip {
+        height: 30px;
+        width: 33%;
+        display: table-cell;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
+    
     <div class="links">
       <a href="search.html">Google Search</a>
     </div>
-    <form action="https://google.com/search">
-      <div class="searchBar">
-      <input id="searchQueryInput" type="text" name="q" placeholder="Google Search">
-      </div>
-      <br />
-      <div class = searchButton> 
-      <input id="searchQuerySubmit" type="submit" value="Google Search">
-    </div>
+
+    <!-- 
+      find pages with "all of these words"
+      find pages with "this exact word or phrase"
+      find pages with "any of these words"
+      find pages with "none of these words"
+    -->
+    <form id="advancedSearch" action="https://google.com/search" method="GET" name="f">
+      <div class="findPages">Find pages with...</div>
+      <div class="findPagesWhitespace">&nbsp;</div>
+      <div class ="tooltip">To do this in the search box.</div>
     </form>
   </body>
 </html>
